@@ -1,6 +1,6 @@
 {
-  "name": "final-project",
-  "version": "0.0.0",
+  "name": "xkcd-forum",
+  "version": "1.0.0",
   "description": "Small description for final-project goes here",
   "private": true,
   "directories": {
