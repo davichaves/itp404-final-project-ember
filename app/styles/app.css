@@ -1,0 +1,9 @@
+
+.comic-template {
+  text-align: center;
+  overflow: hidden;
+}
+
+.comic-image {
+  max-height: 200px !important;
+}
