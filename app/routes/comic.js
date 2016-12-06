@@ -5,7 +5,7 @@ export default Ember.Route.extend({
     var comics = [];
     var comicID = params.comic_id;
     var url = 'https://xkcd-forum-api.herokuapp.com/comics/' + comicID;
-    var myPromise = new Promise(function(resolve, reject) {
+    var myPromise = new Promise(function(resolve) {
       Ember.$.getJSON(url).then(function(result){
         comics.pushObject(result);
       });
