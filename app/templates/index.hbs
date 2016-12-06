@@ -10,12 +10,18 @@
   </div>
 
   <div class="row">
-  {{#each model as |comic index|}}
+  {{ log model }}
+  {{#each model as |comic|}}
+    {{ log comic }}
     <div class="col-md-4">
       <div class="comic-template">
         <img class=" comic-image" src="{{comic.img}}" alt="">
         <h3>{{#link-to "comic" comic.num}}{{comic.title}}{{/link-to}}</h3>
       </div>
+    </div>
+  {{else}}
+    <div class="col-lg-12">
+      <center><h3>NO POSTS TO SHOW :(</h3></center>
     </div>
   {{/each}}
   </div>
