@@ -11,14 +11,14 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{footer-comp}}`);
 
-  assert.equal(this.$().text().trim(), '');
+  assert.equal(this.$().text().trim(), 'Copyright © XKCD FORUM 2016');
 
-  // Template block usage:
-  this.render(hbs`
-    {{#footer-comp}}
-      template block text
-    {{/footer-comp}}
-  `);
+  // // Template block usage:
+  // this.render(hbs`
+  //   {{#footer-comp}}
+  //     template block text
+  //   {{/footer-comp}}
+  // `);
 
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.equal(this.$().text().trim(), 'Copyright © XKCD FORUM 2016');
 });
