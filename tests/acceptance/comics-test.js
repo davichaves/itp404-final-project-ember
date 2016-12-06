@@ -23,7 +23,7 @@ test('visiting /random shows a random comic ', function(assert) {
 test('visiting /about shows about page', function(assert) {
   visit('/about');
   andThen(function() {
-    assert.equal(find('.container').length, 2, "the about is displayed");
     assert.equal(currentURL(), '/about', "Redirects to about correctly");
+    assert.equal(find('.container').length, 2, "the about is displayed");
   });
 });
