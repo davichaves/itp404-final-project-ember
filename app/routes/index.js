@@ -3,14 +3,14 @@ import RSVP from 'rsvp';
 
 export default Ember.Route.extend({
   model: function() {
-    var comics = [{},{},{},{},{},{},{},{},{}];
+    var comics = [];
     var url = 'https://xkcd-forum-api.herokuapp.com/random';
     var myPromise = new RSVP.Promise(function(resolve) {
-      comics.forEach(function(element, index, theArray) {
+      for (var i = 0; i < 9; i++) {
         Ember.$.getJSON(url).then(function(result){
-          theArray[index] = result;
+          comics.pushObject(result);
         });
-      });
+      }
       resolve(comics);
     }).then(function (myComics) {
       return myComics;

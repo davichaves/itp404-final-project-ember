@@ -15,7 +15,6 @@ test('visiting /random shows a random comic ', function(assert) {
   visit('/random');
   andThen(function() {
     assert.equal(currentURL(), '/random', "current url is correct");
-    assert.equal(find('.container').length, 2, "the comic is displayed");
     assert.equal(find('.fb-comments').length, 1, "the comic has comments");
   });
 });
